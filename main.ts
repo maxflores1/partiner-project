@@ -2,6 +2,7 @@ function lives () {
     controller.moveSprite(mySprite, 100, 100)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    mySprite.startEffect(effects.spray, 1)
     question = game.ask("Is 5 times 20 equil 100 ")
     if (question == true) {
         game.reset()
@@ -9,6 +10,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
     if (question == false) {
         game.splash("You Lose")
     }
+})
+controller.onLightConditionChanged(ControllerLightCondition.Bright, function () {
+    scene.setBackgroundColor(9)
 })
 let question = false
 let mySprite: Sprite = null
