@@ -54,6 +54,8 @@ let shark = sprites.create(img`
     .......cccccfbdbbfc.............
     .............fffff..............
     `, SpriteKind.Player)
+mySprite.setStayInScreen(true)
+shark.setStayInScreen(true)
 shark.follow(mySprite, 50)
 shark.setPosition(0, randint(scene.screenWidth(), scene.screenHeight()))
 lives()
