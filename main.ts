@@ -3,7 +3,7 @@ function lives () {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
     mySprite.startEffect(effects.spray, 1)
-    question = game.ask("Is 5 times 20 equil 100 ")
+    question = game.ask("Is 5 times 20 equal 100 ")
     if (question == true) {
         game.reset()
     }
